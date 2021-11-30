@@ -1,0 +1,4 @@
+1. Add Bookings Table
+2. Add StoreNumber Tab to Customer Section
+3. Add StoreNumber to Purchase tab
+3. Add productCode to Product tab
