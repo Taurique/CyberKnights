@@ -33,194 +33,196 @@
 
 
 
-<div>
-
-
-    <!-- Content Wrapper. Contains page content -->
     <div>
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Dashboard
-                @*<small>Version 2.0</small>*@
-            </h1>
-            @*<ol class="breadcrumb">
+
+        <!-- Content Wrapper. Contains page content -->
+        <div>
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Dashboard
+                    @*<small>Version 2.0</small>*@
+                </h1>
+                @*<ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                     <li class="active">Dashboard</li>
                 </ol>*@
-        </section>
+            </section>
 
-        <!-- Main content -->
-        <section class="content">
-            <!-- Info boxes -->
-            <div class="row">
-
+            <!-- Main content -->
+            <section class="content">
+                <!-- Info boxes -->
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="fa fa-suitcase"></i></span>
 
+                    <div class="info-box">
+                        <span class="info-box-icon"><img src="~/Custom Icons/PurchasesImage.png"></img></span>
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="/POPR/Index" size="1">PURCHASES</a></span>
-                            <span class="info-box-number">@ViewBag.POAmount</span>
+                            <!--<span class="info-box-icon"></span><i class="fa fa-suitcase"></i>-->
+
+                            <a class="card-title" href="/POPR/Index" size="1">PURCHASES</a>
+                            <h6>@ViewBag.POAmount</h6>
+
+                            <font size="1" class="pad"><a class="card-text" href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>
+                            <!-- /.info-box-content -->
                         </div>
-                        <font size="1" class="pad"><a href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>
-                        <!-- /.info-box-content -->
+                        <!-- /.info-box -->
                     </div>
-                    <!-- /.info-box -->
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="fa fa-bar-chart"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/SOSR/Index" size="2">SALES</a></span>
-                            <span class="info-box-number">@ViewBag.SOAmount</span>
-                        </div>
-                        <font size="1" class="pad"><a href="/SOSR/Create?IsReturn=false" size="2">New Sale</a></font>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon  bg-primary"><i class="fa fa-area-chart"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/POPR/Index" size="1">PROFIT</a></span>
-                            <span class="info-box-number">@ViewBag.Profit</span>
-                        </div>
-                        @*<font size="1" class="pad"><a href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>*@
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="fa fa-cart-arrow-down "></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/SOSR/Index" size="2">SALE ORDERS</a></span>
-                            <span class="info-box-number">@ViewBag.SOCount</span>
-
-                        </div>
-                        <font size="1" class="pad"><a href="/SOSR/Create?IsReturn=false" size="2">New Sale</a></font>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-
-
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="fa fa-cart-plus"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/POPR/Index" size="1">PURCHASE ORDER</a></span>
-                            <span class="info-box-number">@ViewBag.POCount</span>
-                        </div>
-                        <font size="1" class="pad"><a href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-
-                <!-- /.col -->
-                <!-- /.col -->
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-primary"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Products/Index">Products</a></span>
-                            <span class="info-box-number">@ViewBag.Products</span>
-                        </div>
-                        <font size="1" class="pad"><a href="/Products/Create" size="2">New Product</a></font>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="fa fa-truck"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Suppliers/Index" size="2">SUPPLIERS</a></span>
-                            <span class="info-box-number">@ViewBag.Suppliers</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                        <font size="1" class="pad"><a href="/Suppliers/Create" size="2">New Suppliers</a></font>
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-users"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Customers/Index" size="2">CUSTOMERS</a></span>
-                            <span class="info-box-number">@ViewBag.Customers</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                        <font size="1" class="pad"><a href="/Customers/Create" size="2">New Customer</a></font>
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                @*<div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-black"><i class="fa fa-user-circle-o"></i></span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Employees/Index" size="2">EMPLOYEES</a></span>
-                            <span class="info-box-number">@ViewBag.Employees</span>
-                        </div>
-                        
-                        <font size="1" class="pad"><a href="/Employees/Create" size="2">New Employee</a></font>
                     </div>
                     
-                </div>*@
-                @*<div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="fa fa-building-o"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Departments/Index" size="2">DEPARTMENTS</a></span>
-                            <span class="info-box-number">@ViewBag.Departments</span>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon"><img src="~/Custom Icons/SalesImage.png"></img></span> <!--<i class="fa fa-bar-chart"></i>-->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/SOSR/Index" size="2">SALES</a></span>
+                                <span class="info-box-number">@ViewBag.SOAmount</span>
+                            </div>
+                            <font size="1" class="pad"><a href="/SOSR/Create?IsReturn=false" size="2">New Sale</a></font>
+                            <!-- /.info-box-content -->
                         </div>
-                    
-                        <font size="1" class="pad"><a href="/Departments/Create" size="2">New Department</a></font>
+                        <!-- /.info-box -->
                     </div>
-                    
-                </div>*@
-                @*<div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-green"><i class="fa fa-credit-card"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text"><a href="/Accounts/Index" size="2">ACCOUNTS</a></span>
-                            <span class="info-box-number">@ViewBag.Cccounts</span>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon  "><img src="~/Custom Icons/ProfitImage.png"></span> <!--<i class="fa fa-area-chart"></i>-->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/POPR/Index" size="1">PROFIT</a></span>
+                                <span class="info-box-number">@ViewBag.Profit</span>
+                            </div>
+                            @*<font size="1" class="pad"><a href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>*@
+                            <!-- /.info-box-content -->
                         </div>
-                    
-                        <font size="1" class="pad"><a href="/Accounts/Create" size="2">New Account</a></font>
+                        <!-- /.info-box -->
                     </div>
-                    
-                </div>*@
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
 
-        </section>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-cart-arrow-down "></i></span> <!-- Remove from dashboard if not necessary, duplicate code -->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/SOSR/Index" size="2">SALE ORDERS</a></span>
+                                <span class="info-box-number">@ViewBag.SOCount</span>
+
+                            </div>
+                            <font size="1" class="pad"><a href="/SOSR/Create?IsReturn=false" size="2">New Sale</a></font>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+
+                    <!-- /.col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-green"><i class="fa fa-cart-plus"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/POPR/Index" size="1">PURCHASE ORDER</a></span>
+                                <span class="info-box-number">@ViewBag.POCount</span>
+                            </div>
+                            <font size="1" class="pad"><a href="/POPR/Create?IsReturn=false" size="2">New Purchase</a></font>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    <!-- /.col -->
+                    <!-- /.col -->
+                    <!-- fix for small devices only -->
+                    <div class="clearfix visible-sm-block"></div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon "><img src="~/Custom Icons/ProductsImage.png"></span> <!--<i class="fa fa-shopping-bag" aria-hidden="true"></i>-->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Products/Index">Products</a></span>
+                                <span class="info-box-number">@ViewBag.Products</span>
+                            </div>
+                            <font size="1" class="pad"><a href="/Products/Create" size="2">New Product</a></font>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><img src="~/Custom Icons/SuppliersImage.png"></span> <!--<i class="fa fa-truck"></i>-->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Suppliers/Index" size="2">SUPPLIERS</a></span>
+                                <span class="info-box-number">@ViewBag.Suppliers</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                            <font size="1" class="pad"><a href="/Suppliers/Create" size="2">New Suppliers</a></font>
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-red"> <img src="~/Custom Icons/CustomersImage.png"> </span> <!--<i class="fa fa-users"></i>-->
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Customers/Index" size="2">CUSTOMERS</a></span>
+                                <span class="info-box-number">@ViewBag.Customers</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                            <font size="1" class="pad"><a href="/Customers/Create" size="2">New Customer</a></font>
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+
+                    @*<div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-black"><i class="fa fa-user-circle-o"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Employees/Index" size="2">EMPLOYEES</a></span>
+                                <span class="info-box-number">@ViewBag.Employees</span>
+                            </div>
+
+                            <font size="1" class="pad"><a href="/Employees/Create" size="2">New Employee</a></font>
+                        </div>
+
+                    </div>*@
+                    @*<div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-building-o"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Departments/Index" size="2">DEPARTMENTS</a></span>
+                                <span class="info-box-number">@ViewBag.Departments</span>
+                            </div>
+
+                            <font size="1" class="pad"><a href="/Departments/Create" size="2">New Department</a></font>
+                        </div>
+
+                    </div>*@
+                    @*<div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-green"><i class="fa fa-credit-card"></i></span>
+
+                            <div class="info-box-content">
+                                <span class="info-box-text"><a href="/Accounts/Index" size="2">ACCOUNTS</a></span>
+                                <span class="info-box-number">@ViewBag.Cccounts</span>
+                            </div>
+
+                            <font size="1" class="pad"><a href="/Accounts/Create" size="2">New Account</a></font>
+                        </div>
+
+                    </div>*@
+                    <!-- /.col -->
+                
+                <!-- /.row -->
+
+            </section>
+        </div>
+        <!-- /.table-responsive -->
     </div>
-    <!-- /.table-responsive -->
-</div>
 
 
 

@@ -2834,6 +2834,12 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Custom Icons\CustomersImage.png" />
+    <Content Include="Custom Icons\ProductsImage.png" />
+    <Content Include="Custom Icons\ProfitImage.png" />
+    <Content Include="Custom Icons\PurchasesImage.png" />
+    <Content Include="Custom Icons\SalesImage.png" />
+    <Content Include="Custom Icons\SuppliersImage.png" />
     <Content Include="dist\css\AdminLTE.css" />
     <Content Include="dist\css\AdminLTE.min.css" />
     <Content Include="dist\css\alt\AdminLTE-bootstrap-social.css" />

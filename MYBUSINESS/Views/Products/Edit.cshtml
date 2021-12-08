@@ -26,10 +26,10 @@
 
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label" })
+                                    @Html.LabelFor(model => model.BarCode, htmlAttributes: new { @class = "control-label" })
 
-                                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control", @Readonly = "Readonly" } })
-                                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                                    @Html.EditorFor(model => model.BarCode, new { htmlAttributes = new { @class = "form-control"} })
+                                    @Html.ValidationMessageFor(model => model.BarCode, "", new { @class = "text-danger" })
 
                                 </div>
 

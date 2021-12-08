@@ -79,7 +79,7 @@ namespace MYBUSINESS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,PurchasePrice,SalePrice,Stock,SupplierId,Saleable,PerPack")] Product product)
+        public ActionResult Create([Bind(Include = "Id,BarCode,Name,PurchasePrice,SalePrice,Stock,SupplierId,Saleable,PerPack")] Product product)
         {
             if (product.Stock == null)
             {
@@ -126,7 +126,7 @@ namespace MYBUSINESS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,PurchasePrice,SalePrice,Stock,Saleable,SupplierId,PerPack")] Product product)
+        public ActionResult Edit([Bind(Include = "Id,BarCode,Name,PurchasePrice,SalePrice,Stock,Saleable,SupplierId,PerPack")] Product product)
         {
             //Product prd = db.Products.Where(x => x.Id == product.Id).FirstOrDefault();
             //product.SuppId = prd.SuppId;
@@ -147,7 +147,7 @@ namespace MYBUSINESS.Controllers
             {
 
                 db.Entry(product).State = EntityState.Modified;
-                db.SaveChanges();
+                  db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(product);
